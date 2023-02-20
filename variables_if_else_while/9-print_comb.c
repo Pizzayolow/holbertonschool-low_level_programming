@@ -15,17 +15,18 @@ int main(void)
 	while (n <= 57)
 	{
 	putchar(n);
-	n++;
+		if (n < 57)
+		{
+		n++;
+		putchar(',');
+		putchar(' ');
+		}
+		else
+		{
+		putchar('\n');
+		n++;
+		}
 	}
 
-	n = 97;
-
-	while (n <= 102)
-	{
-	putchar(n);
-	n++;
-	}
-
-	putchar('\n');
 	return (0);
 }
