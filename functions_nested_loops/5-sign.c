@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _isalpha - My function for know what is in lowercase and UPPERCASE or others
- * @c: c are here for the charatcher in ASCII
+ * print_sign - My function show if a number are positive, negative or ZERO
+ * @n: c initialize the variable
  *
  * Return: Return 1 if is an lowercase or UPPERCASE, return 0 if not
  */
@@ -11,7 +11,7 @@ int print_sign(int n)
 	{
 		_putchar('+');
 		n = 1;
-	} 
+	}
 		else if (n == 0)
 		{
 			_putchar('0');
