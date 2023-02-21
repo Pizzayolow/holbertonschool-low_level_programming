@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - check the code
+ * print_alphabet - print_alphabet_with__putchar
  *
  * Return: Always 0.
  */
@@ -11,7 +11,7 @@ void print_alphabet(void)
 
 	while (n <= 'z')
 	{
-		putchar(n);
+		_putchar(n);
 		n++;
 	}
 	putchar ('\n');
