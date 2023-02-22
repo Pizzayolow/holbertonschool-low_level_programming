@@ -8,11 +8,11 @@ void times_table(void)
 {
 	int i;
 
-	for (i = 1; i < 10; i++)
+	for (i = 0; i < 10; i++)
 	{
 		int j;
 
-		for (j = 1; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			int product = i * j;
 
