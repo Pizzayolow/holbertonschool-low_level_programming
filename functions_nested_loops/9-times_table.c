@@ -12,7 +12,10 @@ void times_table(void)
 	{
 		int j;
 
-		for (j = 0; j < 10; j++)
+		_putchar('0');
+		_putchar(',');
+
+		for (j = 1; j < 10; j++)
 		{
 			int product = i * j;
 
