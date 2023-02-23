@@ -15,13 +15,13 @@ int main(void)
 		{
 			printf("FizzBuzz ");
 		}
-		else if (nombre % 5 == 0)
-		{
-			printf("Buzz ");
-		}
 		else if (nombre == 100)
 		{
 			printf("Buzz");
+		}
+		else if (nombre % 5 == 0)
+		{
+			printf("Buzz ");
 		}
 		else if (nombre % 3 == 0)
 		{
