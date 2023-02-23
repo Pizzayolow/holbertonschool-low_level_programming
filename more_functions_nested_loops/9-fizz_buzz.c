@@ -19,6 +19,10 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
+		else if (nombre == 100)
+		{
+			printf("Buzz");
+		}
 		else if (nombre % 3 == 0)
 		{
 			printf("Fizz ");
