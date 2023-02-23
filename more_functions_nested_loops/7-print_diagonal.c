@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * print_diagonal - Check if the letter is an uppercase or not
+ * print_diagonal - This is stairs for backslash
  *
- * @n: ma variable
- * Return: Return 1 if its through 0 and 9
+ * @n: given variable
  */
 void print_diagonal(int n)
 {
@@ -15,13 +14,12 @@ void print_diagonal(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			_putchar(92);
-			_putchar('\n');
-
-			for (a = 0; a <= i; a++)
+			for (a = 0; a < i; a++)
 			{
 				_putchar(' ');
 			}
+			_putchar('\\');
+			_putchar('\n');
 		}
 	}
 	else
