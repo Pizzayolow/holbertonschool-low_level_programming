@@ -13,13 +13,13 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		for (ligne = 0; ligne < size; ligne++)
+		for (ligne = 1; ligne <= size; ligne++)
 		{
 			for (colonne = ligne; colonne < size; colonne++)
 			{
 				_putchar(' ');
 			}
-			for (diez = 0; diez <= ligne; diez++)
+			for (diez = 1; diez <= ligne; diez++)
 			{
 				_putchar('#');
 			}
