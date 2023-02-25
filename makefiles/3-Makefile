@@ -11,10 +11,10 @@ clean:
 	$(RM) ~* *.swp
 
 oclean: 
-	rm $(OBJ)
+	$(OBJ)
 
 fclean:
-	rm $(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 re:
 	oclean all
