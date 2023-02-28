@@ -14,13 +14,13 @@ void rev_string(char *s)
 	for (compteur = 0; s[compteur] != '\0'; compteur++)
 	{
 	}
-	compteur = compteur -1;
+	compteur = compteur - 1;
 	while (toto <= compteur)
 	{
 		temp = s[toto];
 		s[toto] = s[compteur];
 		s[compteur] = temp;
-		compteur --;
-		toto ++;
+		compteur--;
+		toto++;
 	}
 }
