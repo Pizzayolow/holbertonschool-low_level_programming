@@ -23,7 +23,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		half = (i + 1) / 2;
+		half = (half + 1) / 2;
 	}
 
 	while (half < i)
