@@ -6,12 +6,11 @@
  * @n: mmh
  * Return: the numberof charachers in this array
  */
-
 void print_array(int *a, int n)
 {
 	int i = 0;
 
-	if (n > 0)
+	if (n >= 0)
 	{
 		while (a[i] < a[n])
 		{
