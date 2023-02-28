@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_array - the function who return the lenght of a string
- * @*a: the char
+ * @a: the char
  * @n: mmh
  * Return: the numberof charachers in this array
  */
