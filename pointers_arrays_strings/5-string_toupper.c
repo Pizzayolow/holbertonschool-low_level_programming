@@ -12,7 +12,7 @@ char *string_toupper(char *tableau)
 
 	while (tableau[s] != '\0')
 	{
-		if (tableau[s] > 'a' && tableau[s] < 'z')
+		if (tableau[s] >= 'a' && tableau[s] <= 'z')
 		{
 			tableau[s] = tableau[s] - ('a' - 'A');
 		}
