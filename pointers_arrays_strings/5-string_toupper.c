@@ -1,7 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * string_toupper - Write a function that changes all lowercase letters of a string to uppercase.
+ * string_toupper- Writee leing to uppercase
+ * @tableau: array
+ * Return: the string to copy
  */
 
 char *string_toupper(char *tableau)
