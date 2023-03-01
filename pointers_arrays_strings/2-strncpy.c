@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *_strncat - the function who return the lenght of a string
+ * *_strncpy - the function who return the lenght of a string
  * @dest: the destination to copy
  * @src: the source
  * @n: variable
