@@ -25,7 +25,7 @@ char *cap_string(char *str)
 	}
  	if (str[0] > 96 && str[0] < 123)
 	{
-		str[i] = str[i] - ('a' - 'A');
+		str[0] = str[0] - ('a' - 'A');
 	}
 	return (str);
 }
