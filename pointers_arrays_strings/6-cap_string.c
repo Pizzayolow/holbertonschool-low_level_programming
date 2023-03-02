@@ -16,17 +16,16 @@ char *cap_string(char *str)
 	{
 		for (k = 0; s[k] != '\0'; k++)
 		{
-			if (i == 0)
+			if (s[k] == str[i - 1] && (str[i] > 96 && str[i] < 123))
 			{
 				str[i] = str[i] - ('a' - 'A');
-			}
-			else if (s[k] == str[i - 1] && (str[i] > 96 && str[i] < 123))
-			{
-			str[i] = str[i] - ('a' - 'A');
 			}
 		}
 		i++;
 	}
-
+ 	if (str[0] > 96 && str[0] < 123)
+	{
+		str[i] = str[i] - ('a' - 'A');
+	}
 	return (str);
 }
