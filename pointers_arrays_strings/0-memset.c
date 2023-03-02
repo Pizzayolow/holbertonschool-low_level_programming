@@ -4,7 +4,7 @@
  * _memset- Writee leing to uppercase
  * @s: the string in main fonction
  * @b: second parameter
- * @m: the third parameter
+ * @n: the third parameter
  * Return: the string to copy
  */
 
