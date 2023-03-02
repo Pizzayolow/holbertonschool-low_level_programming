@@ -16,7 +16,7 @@ char *cap_string(char *str)
 	{
 		for (k = 0; s[k] != '\0'; k++)
 		{
-			if (str[i] == 0)
+			if (i == 0)
 			{
 				str[i] = str[i] - ('a' - 'A');
 			}
