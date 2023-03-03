@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * _strchr- Writee leing to uppercase
  * @s: the string in main fonction
