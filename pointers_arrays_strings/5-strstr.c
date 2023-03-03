@@ -2,26 +2,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strstr- Writee leing to uppercase
- * @haystack: the string in main fonction
- * @needle: the char we must found
- * Return: the string to copy
+ * _strstr - search a needle in a haystack
+ * @haystack: the string
+ * @needle: the needle
+ * Return: h or NULL
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i;
-	unsigned int k;
+	char *h, *n;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (*haystack != '\0')
 	{
-		for (k = 0; needle[k] != '\0'; k++)
+		h = haystack;
+		n = needle;
+
+		while (*n == *haystack && *n != '\0' && *haystack != '\0')
 		{
-			if (s[i] == accept[k])
-			{
-				return (s + i);
-			}
+			n++;
+			haystack++;
 		}
+
+		if (*n == '\0')
+		{
+			return (h);
+		}
+
+		haystack = h + 1;
 	}
 	return (NULL);
 }
