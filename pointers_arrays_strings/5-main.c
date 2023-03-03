@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-    char str[] = "TaLK IS CHEaP. SHOW ME THE CODE.\n";
-    char *ptr;
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
 
-    ptr = string_toupper(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    t = _strstr(s, f);
+    printf("%s\n", t);
     return (0);
 }
