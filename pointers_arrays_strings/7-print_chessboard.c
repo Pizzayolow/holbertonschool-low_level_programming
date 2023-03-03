@@ -2,10 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strstr- Writee leing to uppercase
- * @haystack: the string in main fonction
- * @needle: the char we must found
- * Return: the string to copy
+ * print_chessboard- Writee leing to uppercase
+ * @a: the string in main fonction
  */
 
 void print_chessboard(char (*a)[8])
