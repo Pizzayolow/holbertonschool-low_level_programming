@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_recursion - Short description, single line
+ * _puts_recursion - Short description, single line
  * @s: Description of parameter x
  * Return: Description of the returned value
  */
