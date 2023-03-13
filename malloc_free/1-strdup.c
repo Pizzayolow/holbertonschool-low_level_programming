@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * create_array - Short description, single line
+ * _strdup - Short description, single line
  * @str: Description of parameter x
  * Return: char
  */
@@ -13,11 +13,15 @@ char *_strdup(char *str)
 	char *tableau;
 	int k = 0;
 
+	if (str == 0)
+	{
+		return (NULL);
+	}
 	for (; str[i] != '\0'; i++)
 	{
 	}
 	tableau = malloc(i * sizeof(char) + 1);
-	if (tableau == 0 || str == NULL)
+	if (tableau == 0)
 	{
 		return (NULL);
 	}
