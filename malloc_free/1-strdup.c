@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	for (; str[i] != '\0'; i++)
 	{
 	}
-	tableau = malloc(i * sizeof(char));
+	tableau = malloc(i * sizeof(char) + 1);
 	if (tableau == 0 || str == NULL)
 	{
 		return (NULL);
