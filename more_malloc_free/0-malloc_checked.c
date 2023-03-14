@@ -7,14 +7,14 @@
  * malloc_checked - function
  *
  * @b : parameter
+ * Return: q;dfuksghlisdrkfg
  */
-
 void *malloc_checked(unsigned int b)
 {
 	int *ptr = NULL;
 
 	ptr = malloc(b);
-	if (b == 0)
+	if (ptr == 0)
 	{
 		exit(98);
 	}
