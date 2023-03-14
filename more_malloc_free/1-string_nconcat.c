@@ -19,6 +19,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int compteur2 = 0;
 	unsigned int k;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	for (i = 0; s1[i] != '\0'; i++, compteur++)
 	{
 	}
@@ -29,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = compteur2;
 	}
-	tab = malloc(sizeof(char) * (compteur + n));
+	tab = malloc(sizeof(char) * (compteur + n) + 1);
 	if (tab == NULL)
 	{
 		return (NULL);
@@ -42,5 +50,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		tab[k] = s2[i];
 	}
+	tab[k] = '\0';
 	return (tab);
 }
