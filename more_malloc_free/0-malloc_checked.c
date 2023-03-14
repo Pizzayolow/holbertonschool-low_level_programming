@@ -5,12 +5,18 @@
 
 /**
  * malloc_checked - function
+ *
  * @b : parameter
  */
 
 void *malloc_checked(unsigned int b)
 {
 	int *ptr = NULL;
-	ptr = malloc(sizeof(b));
+
+	ptr = malloc(b);
+	if (b == 0)
+	{
+		exit (98);
+	}
 	return (ptr);
 }
