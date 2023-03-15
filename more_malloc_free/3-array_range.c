@@ -15,14 +15,14 @@ int *array_range(int min, int max)
 	int *tableau = NULL;
 	int i = 0;
 
-	tableau = malloc(sizeof(int) * max);
-	if (tableau == NULL)
+	if (min > max)
 	{
 		return (NULL);
 	}
-	if (min >= max)
+
+	tableau = malloc(sizeof(int) * (max - min) + 1);
+	if (tableau == NULL || sizeof(tableau) <= sizeof(int))
 	{
-		free(tableau);
 		return (NULL);
 	}
 	for (i = 0; min < max; i++, min++)
