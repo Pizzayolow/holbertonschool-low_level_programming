@@ -20,8 +20,9 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	if (min > max)
+	if (min >= max)
 	{
+		free(tableau);
 		return (NULL);
 	}
 	for (i = 0; min < max; i++, min++)
