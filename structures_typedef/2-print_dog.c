@@ -2,11 +2,8 @@
 #include <stdlib.h>
 
 /**
- * init_dog - Short desription
+ * print_dog - Short desription
  * @d: Description of parameter x
- * @name: dogs name
- * @age: dogs age
- * @owner: dogs owner
  */
 
 #include <string.h>
@@ -26,6 +23,7 @@ void print_dog(struct dog *d)
 	{
 		printf("Name: %s\n", d->name);
 	}
+	printf("Age: %f\n", d->age);
 	if (d->owner == NULL)
 	{
 		printf("(nil)");
@@ -34,6 +32,4 @@ void print_dog(struct dog *d)
 	{
 		printf("Owner: %s\n", d->owner);
 	}
-
-	printf("Age: %f\n", d->age);
 }
