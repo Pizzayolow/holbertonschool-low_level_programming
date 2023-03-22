@@ -10,8 +10,8 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list(count); //crée une variable de type variadique
-	va_start(count, n); // ta liste aura le nombre de "n"
+	va_list(count);
+	va_start(count, n);
 	int i = 0;
 
 	for (i = 0; i < n; i++)
