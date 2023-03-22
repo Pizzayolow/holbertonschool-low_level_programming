@@ -3,12 +3,12 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - Short description, single line
+ * print_strings - Short description, single line
  * @separator: Description of parameter x
  * @n: int
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list(count);
 	unsigned int i = 0;
