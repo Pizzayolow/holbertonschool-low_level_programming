@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * print_dlistint - Short description, single line
  * @h: Description of parameter x
