@@ -1,34 +1,15 @@
 #include "main.h"
 
 /**
- * print_binary - converts a binary to decimal
- * @n: the binary given
+ * print_binary - function that prints the binary of a number
+ * @n: is an integer
  */
+
 void print_binary(unsigned long int n)
 {
-	unsigned int bit_pos = 1 << 30;
-
-	if (n == 0)
+	if (n > 1)
 	{
-		_putchar('0');
+		print_binary(n >> 1);
 	}
-
-	while (bit_pos > n)
-	{
-		bit_pos >>= 1;
-	}
-
-	while (bit_pos > 0)
-	{
-		if (n >= bit_pos)
-		{
-			_putchar('1');
-			n -= bit_pos;
-		}
-		else
-		{
-			_putchar('0');
-		}
-		bit_pos >>= 1;
-	}
+	_putchar((n & 1) + '0');
 }
