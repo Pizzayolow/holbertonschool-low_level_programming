@@ -26,7 +26,7 @@ void ifclose(int file, int file2)
  */
 int main(int argc, char **argv)
 {
-	int n = 0, file_from, file_to;
+	int n = 0, file_from, file_to, close1, close2;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -59,9 +59,9 @@ int main(int argc, char **argv)
 			return (99);
 		}
 	}
-	close(file_from);
-	close(file_to);
-	ifclose(file_from, file_to);
+	close1 = close(file_from);
+	close2 = close(file_to);
+	ifclose(close1, close2);
 	return (0);
 }
 
