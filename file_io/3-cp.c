@@ -7,22 +7,21 @@
  */
 int main(int argc, char **argv)
 {
-	int n;
+	int n = 0;
 	char buffer[1024];
-
-	(void) argc;
 	int file_from;
 	int file_to;
 
+	(void) argc;
 	file_from = open(argv[1], O_RDONLY, 664);
 	file_to = open(argv[2], O_WRONLY, 664);
 
-	if (n == -1)
-	{
-		return (0);
-	}
 	while ((n = read(file_from, buffer, 1024)) != 0)
 	{
+		if (n == -1)
+		{
+			return (0);
+		}
 		write(1, buffer, n);
 		write(file_to, buffer, n);
 	}
