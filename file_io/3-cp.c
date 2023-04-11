@@ -1,5 +1,21 @@
 #include "main.h"
 /**
+ * ifclose - Short description, single line
+ * @file: Description of parameter x
+ * Return: an int
+ */
+int ifclose(int file)
+{
+	close(file);
+	if (file == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		exit(100);
+	}
+	return (0);
+}
+
+/**
  * main - Short description, single line
  * @argc: Description of parameter x
  * @argv: the letter
@@ -31,7 +47,6 @@ int main(int argc, char **argv)
 	{
 		if (n == -1)
 		{
-
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			return (98);
 		}
@@ -41,16 +56,8 @@ int main(int argc, char **argv)
 			return (99);
 		}
 	}
-	if (close(file_from) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-		return (100);
-	}
-	if (close(file_to) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
-		return (100);
-	}
+	ifclose(file_from);
+	ifclose(file_to);
 	return (0);
 }
 
