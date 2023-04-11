@@ -33,7 +33,6 @@ int main(int argc, char **argv)
 		{
 			return (0);
 		}
-		write(1, buffer, n);
 		write(file_to, buffer, n);
 	}
 	close(file_from);
