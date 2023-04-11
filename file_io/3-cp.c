@@ -7,20 +7,26 @@
  */
 int main(int argc, char **argv)
 {
-	int n = 0;
+	int n = 0, file_from, file_to;
 	char buffer[1024];
-	int file_from;
-	int file_to;
 
-	(void) argc;
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to");
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY, 664);
+	if (file_from == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		return (98);
+	}
 	file_to = open(argv[2], O_WRONLY | O_CREAT, 664);
-
+	if (file_to == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+		return (98);
+	}
 	while ((n = read(file_from, buffer, 1024)) != 0)
 	{
 		if (n == -1)
