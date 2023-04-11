@@ -6,7 +6,6 @@
  */
 int ifclose(int file)
 {
-	close(file);
 	if (file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
@@ -56,7 +55,9 @@ int main(int argc, char **argv)
 			return (99);
 		}
 	}
+	close(file_from);
 	ifclose(file_from);
+	close(file_to);
 	ifclose(file_to);
 	return (0);
 }
