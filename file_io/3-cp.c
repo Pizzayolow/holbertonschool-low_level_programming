@@ -31,18 +31,24 @@ int main(int argc, char **argv)
 	{
 		if (n == -1)
 		{
+
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			return (98);
 		}
-		write(file_to, buffer, n);
+		if (write(file_to, buffer, n))
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			return (99);
+		}
 	}
 	if (close(file_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close from file %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		return (100);
 	}
 	if (close(file_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close from file %d\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		return (100);
 	}
 	return (0);
