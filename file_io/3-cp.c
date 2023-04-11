@@ -11,7 +11,7 @@ int ifclose(int file)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
 	}
-	return (0);
+	return (100);
 }
 
 /**
