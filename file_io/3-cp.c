@@ -2,18 +2,22 @@
 /**
  * ifclose - Short description, single line
  * @file: Description of parameter x
+ * @file2: a file
  * Return: an int
  */
-int ifclose(int file)
+void ifclose(int file, int file2)
 {
 	if (file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
 	}
-	return (100);
+	if (file2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		exit(100);
+	}
 }
-
 /**
  * main - Short description, single line
  * @argc: Description of parameter x
@@ -56,9 +60,8 @@ int main(int argc, char **argv)
 		}
 	}
 	close(file_from);
-	ifclose(file_from);
 	close(file_to);
-	ifclose(file_to);
+	ifclose(file_from, file_to);
 	return (0);
 }
 
