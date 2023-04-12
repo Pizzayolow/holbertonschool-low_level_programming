@@ -24,6 +24,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	cle = (unsigned char *)key;
 	index = key_index(cle, ht->size);
+	while (newnode != 0)
+	{
+		if (strcmp(newnode->key, key) == 0)
+		{
+			temp->value = strdup(value);
+			return (1);
+		}
+	}
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
 	newnode->next = NULL;
