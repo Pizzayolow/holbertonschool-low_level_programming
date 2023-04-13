@@ -6,7 +6,7 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *my_array = calloc(size, sizeof(hash_table_t) * 1);
+	hash_table_t *my_array = malloc(sizeof(hash_table_t) * 1);
 
 	if (my_array == NULL)
 	{
@@ -14,7 +14,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	my_array->size = size;
 
-	my_array->array = malloc(sizeof(hash_table_t *) * size);
+	my_array->array = calloc(size, sizeof(hash_table_t *) * 1);
 		if (my_array->array == NULL)
 		{
 			return (NULL);

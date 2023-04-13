@@ -9,10 +9,10 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned char *cle;
-	hash_node_t *newnode;
-	hash_node_t *current_node;
-	unsigned long int index;
+	unsigned char *cle = NULL;
+	hash_node_t *newnode = NULL;
+	hash_node_t *current_node = NULL;
+	unsigned long int index = 0;
 
 	/* Vérification des arguments */
 	if (ht == NULL || key == NULL || value == NULL)
