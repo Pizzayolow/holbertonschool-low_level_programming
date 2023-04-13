@@ -26,6 +26,11 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf("%s'%s': '%s'", coma, ht->array[i]->key, ht->array[i]->value);
 			coma = ", ";
+			while ((ht->array[i] = ht->array[i]->next) != NULL)
+			{
+				printf("%s'%s': '%s'", coma, ht->array[i]->key, ht->array[i]->value);
+				coma = ", ";
+			}
 		}
 	}
 	printf("}\n");
